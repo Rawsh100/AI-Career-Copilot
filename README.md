@@ -1,23 +1,19 @@
 # 🚀 AI Career Copilot — Resume Analyzer + RAG Chatbot
 
-AI Career Copilot is a **GenAI-powered Resume Assistant** built using **LLMs, RAG (Retrieval Augmented Generation), Vector Databases, and Streamlit UI**.
+AI Career Copilot is a Generative AI application that analyzes resumes and allows users to chat with their resume using Retrieval Augmented Generation (RAG).
 
-It helps users:
-
-✅ Analyze resumes using AI HR feedback  
-✅ Chat with resume using RAG chatbot  
-✅ Generate grounded answers using embeddings + FAISS.
+The project demonstrates practical usage of LLMs, embeddings, vector databases, and conversational AI.
 
 ---
 
 ## ⭐ Features
 
-### ✅ AI Resume Analyzer
-- Upload Resume PDF
+### ✅ Resume Analyzer
+
+- Upload resume PDF
 - AI HR evaluation using GPT
-- Resume Score
-- Strengths & Weaknesses
-- Improvement Suggestions
+- Resume score and feedback
+- Strengths and weaknesses analysis.
 
 ---
 
@@ -25,27 +21,67 @@ It helps users:
 
 Ask questions like:
 
-- What skills does candidate have?
-- What Python experience exists?
+- What skills does the candidate have?
 - Generate interview questions.
+- What experience is mentioned?
 
-Uses:
-
-- Document Chunking
-- OpenAI Embeddings
-- FAISS Vector Database
-- Context-aware GPT answers.
+Uses vector search to generate grounded responses.
 
 ---
 
-### ✅ Browser-Based UI
+### ✅ Web UI
 
-Built with Streamlit:
+Built using Streamlit.
 
 - Upload Resume
 - Build Knowledge Base
-- Ask Questions.
+- Chat with Resume.
 
 ---
 
 ## 🧠 Architecture
+
+PDF Resume  
+↓  
+Document Loader  
+↓  
+Chunking  
+↓  
+OpenAI Embeddings  
+↓  
+FAISS Vector Database  
+↓  
+Retriever  
+↓  
+GPT Response.
+
+---
+
+## 🛠 Tech Stack
+
+- Python
+- OpenAI GPT Models
+- LangChain
+- FAISS Vector Database
+- Streamlit
+- RAG Architecture
+
+---
+
+## 📂 Project Structure
+
+AI-Career-Copilot
+
+core → Backend logic
+
+frontend → Streamlit UI
+
+data → Resume files
+
+vectorstore → FAISS database
+
+---
+
+## ⚙️ Setup Instructions
+
+Clone repository:
