@@ -1,19 +1,38 @@
 import streamlit as st
+import os
+import sys
 
-st.title("AI Career Copilot")
+# allow import from core folder
+sys.path.append(os.path.abspath("core"))
 
-tab1,tab2,tab3=st.tabs(
-["Resume","Interview","Q&A"]
+from resume_analyzer import analyze_resume
+
+
+st.title("🚀 AI Career Copilot")
+
+st.write("Upload Resume and Get AI HR Feedback")
+
+
+uploaded_file = st.file_uploader(
+    "Upload Resume PDF",
+    type=["pdf"]
 )
 
-with tab1:
 
- st.write("Resume Analyzer")
+if uploaded_file is not None:
 
-with tab2:
+    save_path = "data/resumes/resume.pdf"
 
- st.write("Interview Practice")
+    with open(save_path, "wb") as f:
+        f.write(uploaded_file.getbuffer())
 
-with tab3:
+    st.success("Resume Uploaded Successfully")
 
- st.write("Document QA")
+
+    if st.button("Analyze Resume"):
+
+        st.write("Analyzing Resume...")
+
+        result = analyze_resume()
+
+        st.write(result)

@@ -1,20 +1,18 @@
-from dotenv import load_dotenv
-import os
+from langchain_community.vectorstores import FAISS
+from langchain_openai import OpenAIEmbeddings
 
-load_dotenv()
-
-from langchain.embeddings import OpenAIEmbeddings
-from langchain.vectorstores import FAISS
 
 def create_vectorstore(chunks):
 
-    embeddings = OpenAIEmbeddings()
+    embeddings = OpenAIEmbeddings(
+        model="text-embedding-3-small"
+    )
 
     db = FAISS.from_documents(
         chunks,
         embeddings
     )
 
-    db.save_local("vectorstore/resume")
+    db.save_local("vectorstore/resume_db")
 
     return db
