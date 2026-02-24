@@ -85,3 +85,91 @@ vectorstore → FAISS database
 ## ⚙️ Setup Instructions
 
 Clone repository:
+
+----
+git clone https://github.com/Rawsh100/AI-Career-Copilot.git
+
+
+Go inside the project folder:
+
+---
+
+### Create Virtual Environment
+
+python -m venv venv
+
+---
+
+### Activate Environment
+
+Windows:
+
+.\venv\Scripts\activate
+
+---
+
+### Install Dependencies
+
+
+pip install -r requirements.txt
+
+
+---
+
+### Create `.env` File
+
+Add your OpenAI API key:
+
+
+OPENAI_API_KEY=your_api_key_here
+
+
+---
+
+## ▶️ Run Resume Analyzer
+
+
+python core/resume_analyzer.py
+
+
+---
+
+## ▶️ Run Resume Chatbot (RAG)
+
+
+python core/resume_chatbot.py
+
+
+---
+
+## 🌐 Run Web UI
+
+
+streamlit run frontend/chat_app.py
+
+
+Open browser:
+
+
+http://localhost:8501
+
+
+---
+
+## 🎯 Skills Demonstrated
+
+- Generative AI
+- Retrieval Augmented Generation (RAG)
+- Vector Databases
+- Prompt Engineering
+- LLM Integration
+
+---
+
+## 👩‍💻 Author
+
+Shweta Rawat
+
+GitHub:
+
+https://github.com/Rawsh100
