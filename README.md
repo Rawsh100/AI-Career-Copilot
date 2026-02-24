@@ -1,84 +1,31 @@
-# 🚀 AI Career Copilot — Resume Analyzer + RAG Chatbot
+# 🚀 AI Career Copilot — Resume Analyzer + RAG Chatbot (FREE Llama3 Version)
 
-AI Career Copilot is a Generative AI application that analyzes resumes and allows users to chat with their resume using Retrieval Augmented Generation (RAG).
+AI Career Copilot is a Generative AI Resume Assistant built using Retrieval Augmented Generation (RAG).
 
-The project demonstrates practical usage of LLMs, embeddings, vector databases, and conversational AI.
+This version runs completely locally using Llama3 via Ollama.
+
+No OpenAI billing or API key required.
 
 ---
 
 ## ⭐ Features
 
-### ✅ Resume Analyzer
-
-- Upload resume PDF
-- AI HR evaluation using GPT
-- Resume score and feedback
-- Strengths and weaknesses analysis.
-
----
-
-### ✅ Resume Chatbot (RAG)
-
-Ask questions like:
-
-- What skills does the candidate have?
-- Generate interview questions.
-- What experience is mentioned?
-
-Uses vector search to generate grounded responses.
-
----
-
-### ✅ Web UI
-
-Built using Streamlit.
-
-- Upload Resume
-- Build Knowledge Base
-- Chat with Resume.
-
----
-
-## 🧠 Architecture
-
-PDF Resume  
-↓  
-Document Loader  
-↓  
-Chunking  
-↓  
-OpenAI Embeddings  
-↓  
-FAISS Vector Database  
-↓  
-Retriever  
-↓  
-GPT Response.
+- Resume PDF Analysis
+- Resume Question Answering Chatbot
+- Local LLM (Llama3)
+- FAISS Vector Database
+- Streamlit Web UI.
 
 ---
 
 ## 🛠 Tech Stack
 
 - Python
-- OpenAI GPT Models
 - LangChain
-- FAISS Vector Database
-- Streamlit
-- RAG Architecture
-
----
-
-## 📂 Project Structure
-
-AI-Career-Copilot
-
-core → Backend logic
-
-frontend → Streamlit UI
-
-data → Resume files
-
-vectorstore → FAISS database
+- Ollama (Llama3)
+- HuggingFace Embeddings
+- FAISS
+- Streamlit.
 
 ---
 
@@ -86,25 +33,29 @@ vectorstore → FAISS database
 
 Clone repository:
 
-----
+
 git clone https://github.com/Rawsh100/AI-Career-Copilot.git
 
 
-Go inside the project folder:
+Go inside folder:
+
+
+cd AI-Career-Copilot
+
 
 ---
 
 ### Create Virtual Environment
 
+
 python -m venv venv
 
----
 
-### Activate Environment
+Activate (Windows):
 
-Windows:
 
 .\venv\Scripts\activate
+
 
 ---
 
@@ -116,25 +67,37 @@ pip install -r requirements.txt
 
 ---
 
-### Create `.env` File
+## 🧠 Install Ollama (Required)
 
-Add your OpenAI API key:
+Download:
 
+https://ollama.com/download
 
-OPENAI_API_KEY=your_api_key_here
-
-
----
-
-## ▶️ Run Resume Analyzer
+Verify installation:
 
 
-python core/resume_analyzer.py
+ollama --version
 
 
 ---
 
-## ▶️ Run Resume Chatbot (RAG)
+## ⬇️ Download Llama3 Model
+
+
+ollama pull llama3
+
+
+---
+
+## ▶️ Run Resume Chatbot
+
+Start Ollama:
+
+
+ollama run llama3
+
+
+In another terminal:
 
 
 python core/resume_chatbot.py
@@ -148,7 +111,7 @@ python core/resume_chatbot.py
 streamlit run frontend/chat_app.py
 
 
-Open browser:
+Open:
 
 
 http://localhost:8501
@@ -160,9 +123,9 @@ http://localhost:8501
 
 - Generative AI
 - Retrieval Augmented Generation (RAG)
+- Local LLM Deployment
 - Vector Databases
-- Prompt Engineering
-- LLM Integration
+- Prompt Engineering.
 
 ---
 
