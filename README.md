@@ -82,7 +82,7 @@ streamlit run frontend/chat_app.py
 
 Open browser:
 
-http://localhost:8501
+http://localhost:8506
 🎯 Skills Demonstrated
 
 Generative AI
